@@ -28,7 +28,7 @@ const parser = port.pipe(new ReadlineParser({ delimiter: '\n' }));
 
 // When data is received from the Arduino, send it to the connected clients via WebSocket
 parser.on('data', (data) => {
-  console.log(`Data from Arduino: ${data}`);
+  //console.log(`Data from Arduino: ${data}`);
   io.emit('arduino-data', data);  // Emit data to React clients
 });
 
